@@ -3,3 +3,4 @@ Federated - 654.5
 Light Smiley - 695.5
 Mixed Sweet Blend - 684.6
 IBP - initial boiling point
+- Oversimplified Appromixation
