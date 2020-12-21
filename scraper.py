@@ -1,10 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-import timeit
 
 
-# load up a chrome driver object
+# load up a chrome driver object, headless 
 def load_chrome_driver():
     options = webdriver.ChromeOptions()
     options.headless = True
@@ -19,6 +18,7 @@ def load_chrome_driver():
 def get_distillation_temps(driver, url):
 
     try:
+        # startup driver, and click on the celcius button to display celcius values
         driver.get(url)
         celcius_btn = driver.find_elements_by_css_selector(
             "label.btn-seconday")[0]
