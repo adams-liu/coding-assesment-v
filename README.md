@@ -18,6 +18,8 @@ _For more info on which versioned were used please see [requirements.txt](requir
 
 ### How to run the application:
 
+![alt text](assets/demo.gif)
+
 1. Ensure that all cells in the Juptyer Notebook client has ran through once and that all modules have imported correctly. Failure to do so may result in an error.
 2. Go on https://www.crudemonitor.ca/home.php and select the oil profile you wish to evaluate. Then click into their distillation button to view the distillation dashboard. _Note that condensate oils do not have distillation profiles_.
 3. Copy the link of the distillation webpage and save it into `url_a` variable in the application cell. Do the same for another oil profile except for `url_b`.
@@ -42,10 +44,9 @@ Also, in the functions cells I tried to do as much code resuse as possible to ma
 When working on the assessment a couple of assumptions were to simplify the overall analysis.
 
 **Chemical Reaction Simplification**
+
 When mixing two different oils its an over simplication to assume that combining the two oils will result in an average of both their distillation profiles. In the real world, there may be other factors that contribute to the results. Maybe one oil has a higher influence on changing values than the other thus skewing the overall results.
 
 **Polynomial Trend Assumption**
-
 ![alt text](assets/trend_example.png)
-
 Before starting the assessment I looked at various oils distillation profiles to see if I can notice any common characteristics in how the graph looks. Overall, all the oils follow a similar trend. Looking at the example above we can break this trend into 3 different sections, from the 0-15% (beginning) , 15-90% (middle), and 90% - 100% (end). Where each individual section follow their own rate of change. With that in mind, it made the most to make the regression function a 3rd degree polynomial. Also, almost of 3rd degree polynomial function I've tested showed a r-squared value of >98%.
