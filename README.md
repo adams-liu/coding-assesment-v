@@ -33,11 +33,7 @@ When approaching the problem I decided to divide the application into 2 sepearte
 1. `scraper.py` which is a web scraper that retrieves data off Crude Monitor.
 2. `main.ipynb` which is the main application that runs the distillation analysis on a Jupyter Notebook client.
 
-I decided to use Jupyter Notebook for this assessment because it made more sense to organize the main application in 4 different cells. The imports, functions, test cases, and the application. Also, Jupyter takes advantage of not having to recompile the entire script just to run a specific cell.
-
-You'll notice that the application will never require the user to copy a path for the chrome driver, this is because the scraper utilizes the ChromeDriverManager tool that will automatically checks and installs the latest chrome driver.
-
-Also, in the functions cells I tried to do as much code resuse as possible to make the code more modular and to make it easier to run tests and to debug.
+I decided to use Jupyter Notebook for this assessment because it made more sense to organize the main application in 4 different cells. The imports, functions, test cases, and the application. Also, Jupyter takes advantage of not having to recompile the entire script just to run a specific cell. By making the functions more modular it made it easier to run tests and to debug.
 
 ### Assumptions
 
@@ -45,10 +41,10 @@ When working on the assessment a couple of assumptions were to simplify the over
 
 **Chemical Reaction Simplification**
 
-When mixing two different oils its an over simplication to assume that combining the two oils will result in an average of both their distillation profiles. In the real world, there may be other factors that contribute to the results. Maybe one oil has a higher influence on changing values than the other thus skewing the overall results.
+When mixing two different oils its an over simplication to assume that combining the two oils will result in an average of both their distillation profiles. In the real world, there may be other factors that contribute to the results. Maybe one oil has a higher influence than the other, thus skewing the overall results.
 
 **Polynomial Trend Assumption**
 
 ![alt text](assets/trend_example.png)
 
-Before starting the assessment I looked at various oils distillation profiles to see if I can notice any common characteristics in how the graph looks. Overall, all the oils follow a similar trend. Looking at the example above we can break this trend into 3 different sections, from the 0-15% (beginning) , 15-90% (middle), and 90% - 100% (end). Where each individual section follow their own rate of change. With that in mind, it made the most to make the regression function a 3rd degree polynomial. Also, almost of 3rd degree polynomial function I've tested showed a r-squared value of >98%.
+Before starting the assessment I looked at various oils distillation profiles to see if I can notice any common characteristics in how the graph looks. Overall, all the oils follow a similar trend. Looking at the example above we can break this trend into 3 different sections, from 0-15% (beginning) , 15-90% (middle), and 90% - 100% (end). Where each individual section follow their own rate of change. With that in mind, it made the most to make the regression function a 3rd degree polynomial. And when conducting regression analysis, most of 3rd degree polynomial function had a r-squared value of >98%.
