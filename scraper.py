@@ -32,7 +32,10 @@ def get_distillation_temps(driver, url):
         temp_list = []
         for i in range(3, 39):
             if (i+1) % 3 == 1:
-                temp_list.append(temps[i].text)
+                if temps[i].text == '-':
+                    temp_list.append(float("NaN"))
+                else: 
+                    temp_list.append(float(temps[i].text))
         return temp_list
 
     except:
@@ -40,10 +43,7 @@ def get_distillation_temps(driver, url):
         return []
 
 
-# t = timeit.timeit("test2()", setup="from __main__ import test2", number=1)
-# print(t)
-
-url = "https://www.crudemonitor.ca/crudes/dist.php?acr=MSY&time=recent"
-driver = load_chrome_driver()
-temp = get_distillation_temps(driver, url)
-print(temp)
+# url = "https://www.crudemonitor.ca/crudes/dist.php?acr=MSY&time=recent"
+# driver = load_chrome_driver()
+# temp = get_distillation_temps(driver, url)
+# print(temp)
