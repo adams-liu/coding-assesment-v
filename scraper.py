@@ -39,11 +39,5 @@ def get_distillation_temps(driver, url):
         return temp_list
 
     except:
-        print("**Error: invalid url or invalid driver module**")
-        return []
-
-
-# url = "https://www.crudemonitor.ca/crudes/dist.php?acr=MSY&time=recent"
-# driver = load_chrome_driver()
-# temp = get_distillation_temps(driver, url)
-# print(temp)
+        # print("**Error: invalid url or invalid driver module**")
+        return "**Error: invalid url or invalid driver module**"
