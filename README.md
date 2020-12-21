@@ -48,3 +48,7 @@ When mixing two different oils its an over simplication to assume that combining
 ![alt text](assets/trend_example.png)
 
 Before starting the assessment I looked at various oils distillation profiles to see if I can notice any common characteristics in how the graph looks. Overall, all the oils follow a similar trend. Looking at the example above we can break this trend into 3 different sections, from 0-15% (beginning) , 15-90% (middle), and 90% - 100% (end). Where each individual section follow their own rate of change. With that in mind, it made the most to make the regression function a 3rd degree polynomial. And when conducting regression analysis, most of 3rd degree polynomial function had a r-squared value of >98%.
+
+### Bugs
+
+Sometimes GitHub is buggy and will not display the .ipynb file. Please visit [Nbviewer](https://nbviewer.jupyter.org/github/adams-liu/coding-assesment-v/blob/main/main.ipynb) to see the source code instead.
