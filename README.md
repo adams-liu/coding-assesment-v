@@ -45,4 +45,7 @@ When working on the assessment a couple of assumptions were to simplify the over
 When mixing two different oils its an over simplication to assume that combining the two oils will result in an average of both their distillation profiles. In the real world, there may be other factors that contribute to the results. Maybe one oil has a higher influence on changing values than the other thus skewing the overall results.
 
 **Polynomial Trend Assumption**
+
+![alt text](assets/trend_example.png)
+
 Before starting the assessment I looked at various oils distillation profiles to see if I can notice any common characteristics in how the graph looks. Overall, all the oils follow a similar trend. Looking at the example above we can break this trend into 3 different sections, from the 0-15% (beginning) , 15-90% (middle), and 90% - 100% (end). Where each individual section follow their own rate of change. With that in mind, it made the most to make the regression function a 3rd degree polynomial. Also, almost of 3rd degree polynomial function I've tested showed a r-squared value of >98%.
